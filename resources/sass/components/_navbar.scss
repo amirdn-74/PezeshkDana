@@ -1,0 +1,95 @@
+nav.navbar {
+	height: 7rem;
+	width: 100%;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&.navbar--reversed {
+		background: $white;
+		box-shadow: 0 3px 5px rgba($color: $black, $alpha: 0.1);
+		position: relative;
+
+		a {
+			color: lighten($color: $primary, $amount: 3);
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+
+	&.sticky {
+		position: fixed;
+		z-index: 10;
+		animation: navbarDrop ease-in-out 500ms;
+	}
+}
+
+.navbar__brand {
+	width: 50px;
+	height: 50px;
+}
+
+.navbar__item {
+	margin-left: 3.5rem;
+	display: inline-block;
+	font-size: 1.6rem;
+
+	&:last-child {
+		margin-left: 0;
+	}
+
+	a {
+		color: $light_gray;
+		position: relative;
+		border-radius: 3px;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&.account a {
+		color: $primary;
+		background: $white;
+		padding: 1.2rem 1.5rem;
+		display: inline-flex;
+		align-items: center;
+
+		.icon {
+			margin-left: 1rem;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+.navbar-toggler {
+	display: none;
+}
+
+@keyframes navbarDrop {
+	0% {
+		top: -100%;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+.navbar.navbar--reversed .account a {
+	background: $primary;
+	color: $white !important;
+}
+
+@media only screen and (max-width: 1000px) {
+	.navbar__menu {
+		display: none;
+	}
+
+	.navbar-toggler {
+		display: block;
+	}
+}

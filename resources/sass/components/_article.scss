@@ -1,0 +1,15 @@
+.article {
+	display: grid;
+	grid-template-columns: 30rem 1fr;
+	gap: 2rem;
+}
+
+.article__details {
+	height: 10rem;
+	background: red;
+}
+
+.article__body {
+	align-self: flex-start;
+	background: blue;
+}

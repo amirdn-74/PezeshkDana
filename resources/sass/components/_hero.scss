@@ -1,0 +1,86 @@
+header.hero {
+    min-height: 65rem;
+    background-image: url("/images/bg3.png");
+    background-size: cover;
+    background-position: bottom left;
+    position: relative;
+}
+
+.report__item {
+    width: 10rem;
+    height: 10rem;
+    background: rgba($color: $white, $alpha: 0.3);
+    border-radius: 3px;
+    // border: 1px solid rgba($color: $white, $alpha: 0.5);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    color: $white;
+
+    .report {
+        font-size: 2.7rem;
+        font-weight: bold;
+        direction: ltr;
+    }
+
+    .description {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}
+
+.hero__main {
+    width: 90%;
+    max-width: 50rem;
+    color: $white;
+    font-size: 1.6rem;
+    text-align: right;
+
+    .page-welcome {
+        font-size: 4.3rem;
+        font-weight: 300;
+    }
+}
+
+@media only screen and(max-width: 1000px) {
+    .hero {
+        background: $primary !important;
+        min-height: 48rem !important;
+    }
+
+    .hero__container {
+        flex-direction: column-reverse;
+    }
+
+    .hero__reports {
+        flex-direction: row;
+        margin-top: 3rem;
+
+        .report__item {
+            margin-left: 1.5rem;
+
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .hero__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__description {
+        text-align: center;
+    }
+
+    .page-welcome {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero {
+        min-height: 55rem !important;
+    }
+}

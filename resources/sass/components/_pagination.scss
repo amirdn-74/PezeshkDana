@@ -1,0 +1,21 @@
+.pagination {
+	display: flex;
+
+	li {
+		display: inline-block;
+		margin: 0 0.5rem;
+
+		a {
+			padding: 0.5rem 1rem;
+			box-shadow: 0 0 5px rgba($color: $black, $alpha: 0.15);
+			color: $primary;
+			font-size: 1.4rem;
+			border-radius: 3px;
+
+			&.active {
+				background: $primary;
+				color: $white;
+			}
+		}
+	}
+}

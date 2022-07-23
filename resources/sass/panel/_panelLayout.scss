@@ -1,0 +1,12 @@
+body.panel {
+	background: #f2f3f5;
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 6rem 1fr;
+	column-gap: 4rem;
+}
+
+.panel-content {
+	overflow-y: auto;
+}

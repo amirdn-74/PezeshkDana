@@ -1,0 +1,37 @@
+.button {
+	padding: 1.5rem;
+	background: $light_gray;
+	border: 2px solid $gray;
+	border-radius: 3px;
+	color: $gray;
+	font-size: 1.6rem;
+	cursor: pointer;
+
+	&.input-size {
+		height: 4.3rem;
+	}
+
+	&.button-white {
+		background: $white;
+		color: $primary;
+		border-color: $white;
+	}
+
+	&.button-white-bordered {
+		background: transparent;
+		color: $white;
+		border-color: $white;
+	}
+
+	&.button-primary {
+		background: $primary;
+		color: $white;
+		border-color: $primary;
+	}
+
+	&.button-primary-bordered {
+		background: transparent;
+		color: $primary;
+		border-color: $primary;
+	}
+}

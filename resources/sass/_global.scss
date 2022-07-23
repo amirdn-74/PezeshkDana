@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: $deep_gray;
+    // background: $light_gray;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+    font-family: Shabnam, tahoma;
+}
+
+input,
+textarea,
+select {
+    font-size: 1.6rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.font-normal {
+    font-size: 1.6rem;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.text-white {
+    color: $white !important;
+}
+
+.font-13 {
+    font-size: 1.3rem;
+}
+
+.font-14 {
+    font-size: 1.4rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.block {
+    width: 100%;
+    display: block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.bg-gradient {
+    background: linear-gradient(45deg, #f3f3f3 0%, #e2f3f7 90%);
+    // background: linear-gradient(45deg, #f3f3f3 0%, #efe7f6 90%);
+}
+
+.ckeditor {
+    height: 30rem;
+}
+
+.bg-red {
+    background: $red !important;
+}
+
+.d-block {
+    display: block;
+}
+
+.float {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms;
+    color: $primary;
+
+    .icon {
+        font-size: 2.5rem;
+    }
+
+    &:hover {
+        background: rgba($color: #000000, $alpha: 0.07);
+    }
+}

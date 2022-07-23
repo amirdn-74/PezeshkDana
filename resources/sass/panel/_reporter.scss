@@ -1,0 +1,28 @@
+.reporter {
+	align-items: flex-start;
+
+	.indicator {
+		background: $primary;
+		color: $white;
+		width: 4.5rem;
+		height: 4.5rem;
+		border-radius: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon {
+			font-size: 3.5rem;
+		}
+	}
+
+	.counter {
+		font-size: 4rem;
+		font-weight: bold;
+		margin-top: 1rem;
+	}
+
+	.title {
+		font-size: 1.6rem;
+	}
+}

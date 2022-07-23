@@ -1,0 +1,30 @@
+.input-field {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-bottom: 1rem;
+	align-items: center;
+	border: 2px solid lighten($color: $gray, $amount: 15);
+	border-radius: 3px;
+
+	.icon {
+		margin-left: 0.5rem;
+		color: lighten($color: $gray, $amount: 15);
+	}
+
+	.form-input {
+		height: 4rem;
+		border: 0;
+		outline: 0;
+		padding-right: 1rem;
+		width: 100%;
+
+		&:focus {
+			border: 0;
+		}
+
+		&::placeholder {
+			font-size: 1.4rem;
+			color: lighten($color: $gray, $amount: 8);
+		}
+	}
+}

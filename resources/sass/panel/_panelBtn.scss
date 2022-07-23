@@ -1,0 +1,19 @@
+.panel-btn {
+	border: 0;
+	border-radius: 1rem;
+	background: $primary;
+	color: $white;
+	cursor: pointer;
+	padding: 1rem 1.5rem;
+	font-size: 1.4rem;
+}
+
+.panel-btn--outlined {
+	border: 1.5px solid $primary;
+	background: transparent;
+	color: $primary;
+}
+
+.btn--small {
+	padding: 0.5rem 0.8rem;
+}

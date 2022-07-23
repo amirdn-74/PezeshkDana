@@ -1,0 +1,37 @@
+@import url("https://v1.fontapi.ir/css/Shabnam");
+@import "variables";
+@import "global";
+
+//========== UTILS ==========
+
+@import "utils/flex";
+@import "utils/margin";
+@import "utils/padding";
+@import "utils/grid";
+
+//========== COMPONENTS ==========
+
+@import "components/hero";
+@import "components/navbar";
+@import "components/button";
+@import "components/homeSearch";
+@import "components/input";
+@import "components/section";
+@import "components/footer";
+@import "components/explore";
+@import "components/articleCard";
+@import "components/pagination";
+@import "components/article";
+@import "components/newsLetter";
+
+//========== PANEL ==========
+
+@import "panel/card";
+@import "panel/accountCard";
+@import "panel/panelInput";
+@import "panel/panelBtn";
+@import "panel/panelLayout";
+@import "panel/sidenav";
+@import "panel/topnav";
+@import "panel/reporter";
+@import "panel/table";

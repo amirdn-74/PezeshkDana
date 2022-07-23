@@ -1,0 +1,18 @@
+.card {
+	border-radius: 1.5rem;
+	padding: 1.5rem;
+	box-shadow: 0 0 1.5rem rgba($color: #000, $alpha: 0.2);
+	background: $white;
+}
+
+.card__title {
+	font-size: 2rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card__content {
+	width: 100%;
+}
