@@ -1,0 +1,33 @@
+.alert {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    background: $light_gray;
+    border: 1.5px solid $gray;
+
+    &.alert-red {
+        background: lighten($color: $red, $amount: 30);
+        color: $red;
+        border-color: $red;
+    }
+
+    &.alert-blue {
+        background: lighten($color: $blue, $amount: 33);
+        color: $blue;
+        border-color: $blue;
+    }
+
+    &.alert-yellow {
+        background: lighten($color: $yellow, $amount: 36);
+        color: darken($color: $yellow, $amount: 8);
+        border-color: $yellow;
+    }
+
+    &.alert-primary {
+        background: lighten($color: $primary, $amount: 63);
+        color: $primary;
+        border-color: $primary;
+    }
+}

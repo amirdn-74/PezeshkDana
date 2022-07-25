@@ -19,6 +19,9 @@
     @include('partials.panel._topNav')
 
     <div class="panel-content mt-4">
+        @if (Session::has('message'))
+            <div class="alert alert-blue mb-4">{{ Session::get('message')['body'] }}</div>
+        @endif
 
         @yield('content')
 

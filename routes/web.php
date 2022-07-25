@@ -19,11 +19,7 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [RegisterController::class, 'createUser']);
 });
 
-Route::delete('logout', function () {
-    auth()->logout();
-
-    return redirect()->route('login');
-})->middleware('auth');
+Route::delete('logout', [LoginController::class, 'logout'])->middleware('auth');
 
 Route::get('/auth/google/redirect', [AuthProvidersController::class, 'redirect']);
 Route::get('/auth/google/callback', [AuthProvidersController::class, 'callback']);

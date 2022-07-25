@@ -28,4 +28,11 @@ class LoginController extends Controller
             'email' => 'مشخصات وارد شده اشتباه است.',
         ])->onlyInput('email');
     }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        return redirect()->route('login');
+    }
 }

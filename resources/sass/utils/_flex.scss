@@ -1,51 +1,51 @@
 .d-flex {
-	display: flex;
+    display: flex;
 }
 
 .d-inline-flex {
-	display: inline-flex;
+    display: inline-flex;
 }
 
 .fd-row {
-	flex-direction: row;
+    flex-direction: row;
 }
 
 .fd-col {
-	flex-direction: column;
+    flex-direction: column;
 }
 
 .fd-row-reverse {
-	flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .fd-col-reverse {
-	flex-direction: col-reverse;
+    flex-direction: col-reverse;
 }
 
 .ai-center {
-	align-items: center;
+    align-items: center;
 }
 
 .ai-start {
-	align-items: start;
+    align-items: start;
 }
 
 .jc-center {
-	justify-content: center;
+    justify-content: center;
 }
 
 .jc-around {
-	justify-content: space-around;
+    justify-content: space-around;
 }
 
 .jc-between {
-	justify-content: space-between;
+    justify-content: space-between;
 }
 
 .jc-evenly {
-	justify-content: space-evenly;
+    justify-content: space-evenly;
 }
 
 .flex-1 {
-	flex: 1;
+    flex: 1;
 }

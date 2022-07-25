@@ -159,6 +159,7 @@ return [
     */
 
     'attributes' => [
+        'request_type' => 'نوع درخواست',
         'name' => 'نام',
         'email' => 'ایمیل',
         'password' => 'رمز عبور',

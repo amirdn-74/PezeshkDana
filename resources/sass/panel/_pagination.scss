@@ -1,0 +1,13 @@
+ul.pagination {
+    .page-item {
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
+        margin: 0;
+
+        &.active {
+            background-color: $primary !important;
+            color: #fff;
+        }
+    }
+}

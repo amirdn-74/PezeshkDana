@@ -1023,6 +1023,7 @@ nav.navbar.sticky {
 
 .card__content {
   width: 100%;
+  font-size: 1.4rem;
 }
 
 .account-card {
@@ -1346,4 +1347,49 @@ table.table tbody tr:nth-child(even) {
 .table-badge.badge--red {
   background: #feecec;
   color: #f56666;
+}
+.table-badge.badge--blue {
+  background: #edf7fd;
+  color: #55b6ed;
+}
+
+.alert {
+  width: 100%;
+  height: auto;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  background: #f2f3f5;
+  border: 1.5px solid #a8a8a8;
+}
+.alert.alert-red {
+  background: #fef6f6;
+  color: #f56666;
+  border-color: #f56666;
+}
+.alert.alert-blue {
+  background: #edf7fd;
+  color: #55b6ed;
+  border-color: #55b6ed;
+}
+.alert.alert-yellow {
+  background: #fffefb;
+  color: #e9b130;
+  border-color: #edbf55;
+}
+.alert.alert-primary {
+  background: #dff3f6;
+  color: #216873;
+  border-color: #216873;
+}
+
+ul.pagination .page-item {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  margin: 0;
+}
+ul.pagination .page-item.active {
+  background-color: #216873 !important;
+  color: #fff;
 }

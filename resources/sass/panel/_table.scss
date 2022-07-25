@@ -1,32 +1,37 @@
 table.table {
-	border-collapse: collapse;
-	width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 
-	tr {
-		border-bottom: 1px solid darken($color: $light_gray, $amount: 3);
-		font-size: 1.4rem;
-		height: 5rem;
-	}
+    tr {
+        border-bottom: 1px solid darken($color: $light_gray, $amount: 3);
+        font-size: 1.4rem;
+        height: 5rem;
+    }
 
-	th {
-		text-align: right;
-		color: $gray;
-	}
+    th {
+        text-align: right;
+        color: $gray;
+    }
 
-	tbody tr:nth-child(even) {
-		background: lighten($color: $light_gray, $amount: 2);
-	}
+    tbody tr:nth-child(even) {
+        background: lighten($color: $light_gray, $amount: 2);
+    }
 }
 
 .table-badge {
-	padding: 0.4rem 1rem;
-	border-radius: 15px;
-	background: lighten($color: $primary, $amount: 62);
-	font-size: 1.2rem;
-	color: $primary;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    background: lighten($color: $primary, $amount: 62);
+    font-size: 1.2rem;
+    color: $primary;
 
-	&.badge--red {
-		background: lighten($color: $red, $amount: 28);
-		color: $red;
-	}
+    &.badge--red {
+        background: lighten($color: $red, $amount: 28);
+        color: $red;
+    }
+
+    &.badge--blue {
+        background: lighten($color: $blue, $amount: 33);
+        color: $blue;
+    }
 }

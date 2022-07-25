@@ -102,7 +102,8 @@ $sideNav = [
         @foreach ($sideNav as $item)
             @if ($user->is($item['for']))
                 <li>
-                    <a href="{{ $item['url'] }}" class="{{ Route::is('/panel/dashboard') ? 'active' : '' }}">
+                    <a href="/panel{{ $item['url'] }}"
+                        class="{{ Request::is('panel' . $item['url'] . '*') ? 'active' : '' }}">
                         <span class="material-icons-outlined icon">{{ $item['icon'] }}</span>
                         <div class="item-title">{{ $item['title'] }}</div>
                     </a>

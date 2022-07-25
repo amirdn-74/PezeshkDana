@@ -5,13 +5,15 @@ namespace App\Models;
 use Error;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -49,5 +51,28 @@ class User extends Authenticatable
     public function isNot($roles): bool
     {
         return !$this->is($roles);
+    }
+
+    public function hasActiveRequest(): bool
+    {
+        $request = Request::where('user_id', Auth::user()->id)
+            ->where('status', 0)
+            ->first();
+
+        return $request ? true : false;
+    }
+
+    public function hasAcceptedRequest(): bool
+    {
+        $request = Request::where('user_id', Auth::user()->id)
+            ->where('status', 2)
+            ->first();
+
+        return $request ? true : false;
+    }
+
+    public function requests()
+    {
+        return $this->hasMany(Request::class);
     }
 }

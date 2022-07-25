@@ -64,13 +64,17 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('/panel/users')
                 ->group(base_path('routes/panel/users.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/requests')
                 ->group(base_path('routes/panel/requests.php'));
 
             Route::middleware(['web'])
                 ->prefix('/panel/admins')
                 ->group(base_path('routes/panel/admins.php'));
+
+            Route::middleware(['web', 'auth'])
+                ->prefix('/panel/get-promote')
+                ->group(base_path('routes/panel/promotion.php'));
         });
     }
 

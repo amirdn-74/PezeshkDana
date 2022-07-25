@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Request;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -40,6 +41,11 @@ class DatabaseSeeder extends Seeder
             'role' => 'super'
         ]);
 
+        Request::factory()->create([
+            'user_id' => 1
+        ]);
+
         User::factory(10)->create();
+        Request::factory(10)->create();
     }
 }
