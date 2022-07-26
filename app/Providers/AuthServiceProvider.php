@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Request;
 use App\Models\User;
+use App\Policies\AdminsPolicy;
 use App\Policies\DashboardPolicy;
 use App\Policies\GetPromotionPolicy;
 use App\Policies\RequestsPolicy;
@@ -33,5 +34,6 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('seeDashboard', [DashboardPolicy::class, 'seeDashboard']);
         Gate::define('submitRequest', [GetPromotionPolicy::class, 'submitRequest']);
+        Gate::define('manageAdmins', [AdminsPolicy::class, 'manageAdmins']);
     }
 }

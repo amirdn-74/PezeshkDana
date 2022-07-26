@@ -71,6 +71,18 @@ class User extends Authenticatable
         return $request ? true : false;
     }
 
+    public function transformToAdmin()
+    {
+        $this->role = 'admin';
+        $this->save();
+    }
+
+    public function transformTouser()
+    {
+        $this->role = 'user';
+        $this->save();
+    }
+
     public function requests()
     {
         return $this->hasMany(Request::class);

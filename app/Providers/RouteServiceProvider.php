@@ -40,27 +40,27 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('/panel/dashboard')
                 ->group(base_path('routes/panel/dashboard.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/articles')
                 ->group(base_path('routes/panel/articles.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/que')
                 ->group(base_path('routes/panel/que.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/assignments')
                 ->group(base_path('routes/panel/assignments.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/categories')
                 ->group(base_path('routes/panel/categories.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/resources')
                 ->group(base_path('routes/panel/resources.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/users')
                 ->group(base_path('routes/panel/users.php'));
 
@@ -68,7 +68,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('/panel/requests')
                 ->group(base_path('routes/panel/requests.php'));
 
-            Route::middleware(['web'])
+            Route::middleware(['web', 'auth'])
                 ->prefix('/panel/admins')
                 ->group(base_path('routes/panel/admins.php'));
 

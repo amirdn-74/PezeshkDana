@@ -63,6 +63,43 @@ logoutBtn.addEventListener("click", function () {
 
 /***/ }),
 
+/***/ "./resources/js/panel/managingAdmin.js":
+/*!*********************************************!*\
+  !*** ./resources/js/panel/managingAdmin.js ***!
+  \*********************************************/
+/***/ (() => {
+
+var makingAdmin = function makingAdmin() {
+  var addAdminBtn = document.getElementById("addAdminBtn"),
+      addAdminForm = document.getElementById("addAdminForm");
+
+  if (addAdminBtn && addAdminForm) {
+    addAdminBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var confirmation = prompt("\u0644\u0637\u0641\u0627 \u0639\u0628\u0627\u0631\u062A \"CONFIRM\" \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F");
+      if (confirmation !== "CONFIRM") return alert("اشتباه");
+      addAdminForm.submit();
+    });
+  }
+};
+
+var removingAdmin = function removingAdmin() {
+  var removeAdminBtns = document.querySelectorAll('[data-action="removeAdminBtn"]');
+  removeAdminBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var confirmation = prompt("\u0644\u0637\u0641\u0627 \u0639\u0628\u0627\u0631\u062A \"CONFIRM\" \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F");
+      if (confirmation !== "CONFIRM") return alert("اشتباه");
+      console.log(btn.parentNode.submit());
+    });
+  });
+};
+
+makingAdmin();
+removingAdmin();
+
+/***/ }),
+
 /***/ "./resources/js/panel/select.js":
 /*!**************************************!*\
   !*** ./resources/js/panel/select.js ***!
@@ -76,13 +113,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tom_select_dist_css_tom_select_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tom-select/dist/css/tom-select.css */ "./node_modules/tom-select/dist/css/tom-select.css");
 
 
-new (tom_select__WEBPACK_IMPORTED_MODULE_0___default())("#select", {
-  plugins: ["remove_button"],
-  sortField: {
-    field: "text",
-    direction: "asc"
-  }
-});
+var select = document.getElementById("select");
+
+if (select) {
+  var control = new (tom_select__WEBPACK_IMPORTED_MODULE_0___default())("#select", {
+    plugins: ["remove_button"],
+    sortField: {
+      field: "text",
+      direction: "asc"
+    }
+  });
+}
 
 /***/ }),
 
@@ -5608,6 +5649,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./select */ "./resources/js/panel/select.js");
 /* harmony import */ var _logout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logout */ "./resources/js/panel/logout.js");
 /* harmony import */ var _logout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_logout__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _managingAdmin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./managingAdmin */ "./resources/js/panel/managingAdmin.js");
+/* harmony import */ var _managingAdmin__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_managingAdmin__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
