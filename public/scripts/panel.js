@@ -57,8 +57,7 @@ _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default().create(
 var logoutBtn = document.getElementById("logoutBtn"),
     logoutForm = document.getElementById("logoutForm");
 logoutBtn.addEventListener("click", function () {
-  // logoutForm.onsubmit();
-  alert();
+  logoutForm.submit();
 });
 
 /***/ }),

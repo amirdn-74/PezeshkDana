@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Artisan::command('db', function () {
+Artisan::command('fresh-db', function () {
     Artisan::call('migrate:fresh --seed');
 })->purpose('remigrate and seed the database.');

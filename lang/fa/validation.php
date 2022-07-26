@@ -183,7 +183,8 @@ return [
         'images' => 'تصاویر',
         'attributes' => 'ویژگی ها',
         'illnesses' => 'بیماری ها',
-        'specialities' => 'تخصص ها'
+        'specialities' => 'تخصص ها',
+        'url' => 'آدرس اینترنتی'
     ],
 
 ];

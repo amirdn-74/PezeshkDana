@@ -3,11 +3,13 @@
 namespace App\Providers;
 
 use App\Models\Request;
+use App\Models\Resource;
 use App\Models\User;
 use App\Policies\AdminsPolicy;
 use App\Policies\DashboardPolicy;
 use App\Policies\GetPromotionPolicy;
 use App\Policies\RequestsPolicy;
+use App\Policies\ResourcesPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -20,7 +22,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Models\Model' => 'App\Policies\ModelPolicy',
-        Request::class => RequestsPolicy::class
+        Request::class => RequestsPolicy::class,
+        Resource::class => ResourcesPolicy::class
     ];
 
     /**
@@ -35,5 +38,6 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('seeDashboard', [DashboardPolicy::class, 'seeDashboard']);
         Gate::define('submitRequest', [GetPromotionPolicy::class, 'submitRequest']);
         Gate::define('manageAdmins', [AdminsPolicy::class, 'manageAdmins']);
+        Gate::define('manageResources', [ResourcesPolicy::class, 'manageResources']);
     }
 }
