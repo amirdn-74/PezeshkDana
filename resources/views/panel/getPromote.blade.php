@@ -27,7 +27,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="type" class="label">پیام (اختیاری):</label>
-                            <textarea type="text" name="" id="" class="panel-input w-100"></textarea>
+                            <textarea type="text" name="message" id="" class="panel-input w-100"></textarea>
                             @error('message')
                                 <span class="error-message mt-1 mb-2">{{ $message }}</span>
                             @enderror
@@ -63,7 +63,7 @@
                                 @elseif ($request->status == 1)
                                     <span class="table-badge badge--red">رد شده</span>
                                 @elseif ($request->status == 2)
-                                    <span class="table-badge badge--red">پذیرفته شده</span>
+                                    <span class="table-badge">پذیرفته شده</span>
                                 @endif
                             </td>
                             <td>{{ jdate($request->created_at) }}</td>

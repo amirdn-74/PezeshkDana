@@ -170,7 +170,7 @@ return [
         'article_file' => 'فایل مقاله',
         'writer' => 'نویسنده',
         'scientificLevel' => 'سطح علمی',
-        'speciality' => 'تخصص',
+        'specialty' => 'تخصص',
         'illness' => 'بیماری و شرایط',
         'user' => 'کاربر',
         'status' => 'وضعیت',
@@ -184,7 +184,8 @@ return [
         'attributes' => 'ویژگی ها',
         'illnesses' => 'بیماری ها',
         'specialities' => 'تخصص ها',
-        'url' => 'آدرس اینترنتی'
+        'url' => 'آدرس اینترنتی',
+        'scientific_level' => 'سطح علمی'
     ],
 
 ];

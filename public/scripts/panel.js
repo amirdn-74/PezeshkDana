@@ -18,6 +18,27 @@ function(t,e){ true?module.exports=e():0}(self,(()=>(()=>{"use strict";var t={30
 
 /***/ }),
 
+/***/ "./resources/js/panel/categories.js":
+/*!******************************************!*\
+  !*** ./resources/js/panel/categories.js ***!
+  \******************************************/
+/***/ (() => {
+
+var deleteCategoryBtn = document.getElementById("deleteCategoryBtn");
+
+if (deleteCategoryBtn) {
+  deleteCategoryBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    var isConfirmed = confirm("آیا مایل به حذف این دسته بندی هستید؟");
+
+    if (isConfirmed) {
+      document.getElementById("deleteCategoryForm").submit();
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/panel/editor.js":
 /*!**************************************!*\
   !*** ./resources/js/panel/editor.js ***!
@@ -5650,6 +5671,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_logout__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _managingAdmin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./managingAdmin */ "./resources/js/panel/managingAdmin.js");
 /* harmony import */ var _managingAdmin__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_managingAdmin__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _categories__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./categories */ "./resources/js/panel/categories.js");
+/* harmony import */ var _categories__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_categories__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 

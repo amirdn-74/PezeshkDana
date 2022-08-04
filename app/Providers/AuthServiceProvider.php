@@ -6,6 +6,7 @@ use App\Models\Request;
 use App\Models\Resource;
 use App\Models\User;
 use App\Policies\AdminsPolicy;
+use App\Policies\CategoriesPolicy;
 use App\Policies\DashboardPolicy;
 use App\Policies\GetPromotionPolicy;
 use App\Policies\RequestsPolicy;
@@ -39,5 +40,6 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('submitRequest', [GetPromotionPolicy::class, 'submitRequest']);
         Gate::define('manageAdmins', [AdminsPolicy::class, 'manageAdmins']);
         Gate::define('manageResources', [ResourcesPolicy::class, 'manageResources']);
+        Gate::define('manageCategories', [CategoriesPolicy::class, 'manageCategories']);
     }
 }

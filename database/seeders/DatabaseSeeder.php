@@ -2,8 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\Attribute;
+use App\Models\Illness;
 use App\Models\Request;
 use App\Models\Resource;
+use App\Models\ScientificLevel;
+use App\Models\Specialty;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -49,5 +53,9 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         Request::factory(10)->create();
         Resource::factory(10)->create();
+        ScientificLevel::factory(10)->create();
+        Specialty::factory(10)->create();
+        Illness::factory(10)->create();
+        Attribute::factory(10)->create();
     }
 }
